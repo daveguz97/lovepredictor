@@ -1,0 +1,109 @@
+/*Global*/
+body {
+  line-height: 1.6;
+  background-color: #ff89eb;
+  text-align: center;
+}
+
+.container {
+  margin-top: 2rem;
+  width: 50%;
+  font-family: cursive;
+}
+
+/*Header*/
+header h1 {
+  font-family: "Indie Flower", cursive;
+}
+
+/*Section*/
+section p {
+  display: inline-block;
+  color: #ff414d;
+}
+
+#visible {
+  display: none;
+}
+
+#love-score,
+#love-description {
+  margin-top: 1rem;
+}
+
+#love-description {
+  color: black;
+  font-weight: 600;
+}
+
+/*Form divs*/
+.input-div {
+  display: inline-block;
+}
+label {
+  display: block;
+}
+
+/*Footer*/
+footer {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  background-color: #6d3b65;
+}
+
+/*Cool animation effects for the social media links*/
+@keyframes social-media-effects {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(90deg);
+  }
+  50% {
+    transform: rotate(120deg);
+  }
+  75% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+footer .fab {
+  margin: 1rem;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+footer .fab:hover {
+  opacity: 0.7;
+  animation-name: social-media-effects;
+  animation-duration: 400ms;
+}
+
+footer .fa-facebook-f {
+  color: #3b5998;
+}
+
+footer .fa-linkedin {
+  color: #007bb5;
+}
+
+footer .fa-twitter {
+  color: #55acee;
+}
+
+footer small {
+  display: block;
+  margin-bottom: 0.5em;
+  font-weight: 700;
+}
+
+/*For mobile phones*/
+@media only screen and (max-width: 600px) {
+  footer {
+    display: none;
+  }
+}
