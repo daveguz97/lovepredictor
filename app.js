@@ -13,14 +13,14 @@ calculate.addEventListener("click", loveFunction);
 
 //Function for when the button clicks
 function loveFunction() {
-  if (form.checkValidity() === true) {
-    const lovePercent = Math.floor(Math.random() * 100) + 1;
-    const summary = (loveScore.innerHTML = lovePercent + "%");
+  if (form.checkValidity()) {
+    var lovePercent = Math.floor(Math.random() * 100) + 1;
+    var summary = (loveScore.innerHTML = lovePercent + "%");
     visible.style.display = "initial";
     if (lovePercent <= 25) {
       location.href = "#love-description";
       summary;
-      loveDescription.innerHTML =
+      loveDescription.textContent =
         yourName.value +
         " and " +
         crushName.value +
@@ -28,19 +28,22 @@ function loveFunction() {
     } else if (lovePercent > 25 && lovePercent <= 50) {
       location.href = "#love-description";
       summary;
-      loveDescription.innerHTML =
+      loveDescription.textContent =
         "Love isn't perfect, but you and " +
         crushName.value +
         " might work out, just expect fights.";
     } else if (lovePercent > 50 && lovePercent <= 75) {
       location.href = "#love-description";
-      loveDescription.innerHTML =
+      summary;
+      loveDescription.textContent =
         "You and " +
         crushName.value +
         " are almost perfect for each other, but they're maybe a few problems you guys will need to work out, but you both will work it out together!";
     } else {
       location.href = "#love-description";
-      yourName.value +
+      summary;
+      loveDescription.textContent =
+        yourName.value +
         " and " +
         crushName.value +
         " sounds like a match made in Heaven!";
